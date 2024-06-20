@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Ask For Date</title>
 </head>
 <body>
-    <img src="{% static 'images/date.png' %}" alt="date?" class="header-img">
+    <img src="{% static 'date.png' %}" alt="date?" class="header-img">
     <div class="container" id="container">
-        <img src="{% static 'images/erm-fingers.gif' %}" alt="please" class="image-1">
-        <img src="{% static 'images/oh-yay.gif' %}" alt="yes" class="image-2 hide">
+        <img src="{% static 'erm-fingers.gif' %}" alt="please" class="image-1">
+        <img src="{% static 'oh-yay.gif' %}" alt="yes" class="image-2 hide">
         <button class="btn btn-yes">Yes</button>
         <button class="btn btn-no">No</button>
     </div>
     {% block scripts %}
-    <script src="{% static 'js/index.js' %}" defer></script>
+    <script src="{% static 'index.js' %}" defer></script>
     {% endblock %}
 </body>
 </html>
