@@ -1,23 +1,22 @@
 {
     "builds": [
       {
-        "src": "mypj/wsgi.py",
+        "src": "myapp/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.12"
+        }
       }
     ],
     "routes": [
-      { "src": "/static/(.*)", "dest": "static/$1" },
-      { "src": "/(.*)", "dest": "mypj/wsgi.py" }
-    ],
-    "rewrites": [
       {
-        "source": "/static/(.*)",
-        "destination": "/static/$1"
+        "src": "/static/(.*)",
+        "dest": "myapp/static/$1"
       },
       {
-        "source": "/(.*)",
-        "destination": "/mypj/wsgi.py"
+        "src": "/(.*)",
+        "dest": "myapp/wsgi.py"
       }
     ]
   }
