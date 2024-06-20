@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>Ask For Date</title>
+</head>
+<body>
+    <img src="{% static 'assets/images/date.png' %}" alt="date?" class="header-img">
+    <div class="container" id="container">
+        <img src="{% static 'assets/images/erm-fingers.gif' %}" alt="please" class="image-1">
+        <img src="{% static 'assets/images/oh-yay.gif' %}" alt="yes" class="image-2 hide">
+        <button class="btn btn-yes">Yes</button>
+        <button class="btn btn-no">No</button>
+    </div>
+    {% block scripts %}
+    <script src="{% static 'assets/js/index.js' %}" defer></script>
+    {% endblock %}
+</body>
+</html>
