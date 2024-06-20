@@ -9,5 +9,5 @@ urlpatterns = [
     path('', include("myapp.urls")),
 ]
 
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
